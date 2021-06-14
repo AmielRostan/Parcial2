@@ -6,6 +6,7 @@ class GuardsController < ApplicationController
   # GET /guards or /guards.json
   def index
     @guards = Guard.all
+    @guards = @guards.order("guard_date ASC")
   end
 
   # GET /guards/1 or /guards/1.json

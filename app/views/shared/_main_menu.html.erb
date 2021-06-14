@@ -1,0 +1,26 @@
+<div class="collapse navbar-collapse show" id="navbarWithDropdown">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <%= link_to "centro medico", medical_centers_url, class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "tipos de CM", medical_center_types_url, class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "guardias", guards_url, class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "turnos", appointments_url, class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "trabajadores", workers_url, class: 'nav-link'%>
+    </li>
+    <li class="nav-item">
+      <%= link_to "tipos de trabajadores", worker_types_url, class: 'nav-link'%>
+    </li>
+    <!-- Dropdown -->
+    <li>
+      <%= link_to "Administrators", administrators_url, class: 'nav-link' if can? :index, :administrator %>
+    </li>
+  </ul>
+</div>
